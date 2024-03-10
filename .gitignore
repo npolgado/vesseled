@@ -1,0 +1,22 @@
+# GITIGNORE
+
+# VS CODE
+*.vscode
+*.lprof
+
+# ARDUINO
+*.hex
+
+# PYTHON
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+#KICAD
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-backups*
+*.csv*
+*Pos/
+*Gerber/
