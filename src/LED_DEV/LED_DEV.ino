@@ -13,11 +13,11 @@ FASTLED_USING_NAMESPACE
 #define NUM_LEDS    114 // 192 - 114 = 78 LED's left
 #define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
 
-#define BRIGHTNESS          25
+#define BRIGHTNESS         25
 #define FRAMES_PER_SECOND  120
 
 #define COLOR_SHIFT_DELAY   15
-#define SECONDS_PER_PATTERN 30
+#define SECONDS_PER_PATTERN 15
 
 #define MONITOR_MIDPOINT 53
 
@@ -134,14 +134,14 @@ void loop()
   // gPatternsL[gCurrentPatternNumber](0, random_num);
   // gPatternsR[gCurrentPatternNumber](random_num+1, NUM_LEDS);
 
-  // monitor split
-  gPatternsL[gCurrentPatternNumberL](0, MONITOR_MIDPOINT);
-  gPatternsR[gCurrentPatternNumberR](MONITOR_MIDPOINT+1, NUM_LEDS);
+  // // monitor split
+  // gPatternsL[gCurrentPatternNumberL](0, MONITOR_MIDPOINT);
+  // gPatternsR[gCurrentPatternNumberR](MONITOR_MIDPOINT+1, NUM_LEDS);
 
-  // send the 'leds' array out to the actual LED strip
-  FastLED.show();  
-  // insert a delay to keep the framerate modest
-  FastLED.delay(1000/FRAMES_PER_SECOND); 
+  // // send the 'leds' array out to the actual LED strip
+  // FastLED.show();  
+  // // insert a delay to keep the framerate modest
+  // FastLED.delay(1000/FRAMES_PER_SECOND); 
 
   // do some periodic updates
   EVERY_N_MILLISECONDS( COLOR_SHIFT_DELAY ) { gHue++; } // slowly cycle the "base color" through the rainbow
